@@ -19,6 +19,7 @@ CHALLENGE_TIMEOUT = 120
 
 ### Simple Deathroll
 PREFIX = "!"
+intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
 
@@ -238,7 +239,7 @@ async def deathroll(
             msg = "Challenge declined."
         g.status = "finished"
         games[game_id] = g
-        for item in view.children:no im just 
+        for item in view.children:
             item.disabled = True
         await i.response.edit_message(content=msg, view=view)
 
